@@ -30,11 +30,6 @@ namespace WeatherForecastWPF
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            using (var context = new WeatherContext())
-            {
-                context.Places.Add(new Place { Name = "Pavlodar", Type = "city", CountryId = 1, Woeid = 2264769 });
-                context.SaveChanges();
-            }
             int currentLocationWoeid = 2264962; // Astana
             PlaceRepository placeRepository = new PlaceRepository();
             var place = placeRepository.GetCityWoeid(currentLocationWoeid);
@@ -104,7 +99,7 @@ namespace WeatherForecastWPF
                             ImageSource image = new BitmapImage(new Uri(@"Pictures\" + type.Value, UriKind.RelativeOrAbsolute));
                             images[i].Source = image;
                             textBoxes[i].Text = weather.CurrentObservation.Condition.Text;
-                            textBlocks[i].Text = $" TODAY\n\n" +
+                            textBlocks[i].Text = $" TODAY {DateTime.Now.ToShortDateString()}\n\n" +
                                 $" Temp now: {weather.CurrentObservation.Condition.Temperature}°C\n" + // ALT + 0176
                                 $" Humidity: {weather.CurrentObservation.Atmosphere.Humidity}%\n" +
                                 $" Wind: {weather.CurrentObservation.Wind.Speed} м/c\n\n" +
@@ -122,7 +117,7 @@ namespace WeatherForecastWPF
                             ImageSource image = new BitmapImage(new Uri(@"Pictures\" + type.Value, UriKind.RelativeOrAbsolute));
                             images[i].Source = image;
                             textBoxes[i].Text = weather.Forecasts[i].Text;
-                            textBlocks[i].Text = $" {weather.Forecasts[i].Day}\n\n" +
+                            textBlocks[i].Text = $" {weather.Forecasts[i].Day} {DateTime.Now.AddDays(i).ToShortDateString()}\n\n" +
                                 $" High Temp: {weather.Forecasts[i].High}°C\n" +
                                 $" Low Temp: {weather.Forecasts[i].Low}°C";
                         }

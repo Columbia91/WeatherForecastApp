@@ -71,6 +71,41 @@ namespace WeatherForecastWPF
                     Type = "city",
                     CountryId = 1,
                     Woeid = 56121534
+                },
+                new Place
+                {
+                    Name = "Taraz",
+                    Type = "city",
+                    CountryId = 1,
+                    Woeid = 2264353
+                },
+                new Place
+                {
+                    Name = "Shymkent",
+                    Type = "city",
+                    CountryId = 1,
+                    Woeid = 2262028
+                },
+                new Place
+                {
+                    Name = "Oral",
+                    Type = "city",
+                    CountryId = 1,
+                    Woeid = 2264983
+                },
+                new Place
+                {
+                    Name = "Moscow",
+                    Type = "city",
+                    CountryId = 3,
+                    Woeid = 2122265
+                },
+                new Place
+                {
+                    Name = "Washington",
+                    Type = "city",
+                    CountryId = 2,
+                    Woeid = 2514815
                 }
             });
         }

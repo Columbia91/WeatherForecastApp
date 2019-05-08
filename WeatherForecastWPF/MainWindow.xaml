@@ -9,8 +9,8 @@
     <Canvas>
         <Label Content="Enter City" Margin="51,10"/>
         <TextBox Name="TextBoxPlace" Height="26" TextWrapping="Wrap" RenderTransformOrigin="1.866,-0.542" Canvas.Left="146" Width="403" Canvas.Top="12"/>
-        <Label Name="LabelPlaceName" FontSize="24" Canvas.Left="39" Canvas.Top="132" Height="50"  Width="200"></Label>
-        <Label Name="LabelCountryName" FontSize="24" Canvas.Right="39" Canvas.Top="132" Height="50"  Width="200"></Label>
+        <Label Name="LabelPlaceName" HorizontalContentAlignment="Center" FontSize="24" Canvas.Left="39" Canvas.Top="132" Height="50"  Width="200"></Label>
+        <Label Name="LabelCountryName" HorizontalContentAlignment="Center" FontSize="24" Canvas.Right="39" Canvas.Top="132" Height="50"  Width="200"></Label>
         <Label Name="LabelFirstDay" Canvas.Left="290" Canvas.Top="50" Width="305">
             <Label.ToolTip>
                 <TextBox Name="TextBoxFirstDay"/>
