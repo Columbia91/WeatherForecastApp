@@ -40,8 +40,6 @@ namespace WeatherForecastWPF
             var place = placeRepository.GetCityWoeid(currentLocationWoeid);
             if (place != null)
                 ShowWeather(place);
-            else
-                MessageBox.Show("Unfortunately this city is unknown to us", "Information", MessageBoxButton.OK, MessageBoxImage.Error);
         }
         private void ButtonFind_Click(object sender, RoutedEventArgs e)
         {
