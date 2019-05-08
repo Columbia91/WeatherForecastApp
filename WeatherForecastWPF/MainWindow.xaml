@@ -5,101 +5,138 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherForecastWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="547.246" Width="874.365">
+        Title="Weather Forecast" Height="611.446" Width="874.365">
     <Canvas>
-        <Label Content="Введите город" Margin="51,10"/>
-        <TextBox Height="26" TextWrapping="Wrap" Text="TextBox" RenderTransformOrigin="1.866,-0.542" Canvas.Left="146" Width="403" Canvas.Top="12"/>
-        <Label Name="LabelFirstDay" Canvas.Left="263" Canvas.Top="47" Width="260">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Name="ImageFirstDay" Grid.Column="0"/>
-                <TextBlock Name="TextBlockFirstDay" Grid.Column="1"/>
-            </Grid>
+        <Label Content="Enter City" Margin="51,10"/>
+        <TextBox Name="TextBoxPlace" Height="26" TextWrapping="Wrap" RenderTransformOrigin="1.866,-0.542" Canvas.Left="146" Width="403" Canvas.Top="12"/>
+        <Label Name="LabelPlaceName" FontSize="24" Canvas.Left="39" Canvas.Top="132" Height="50"  Width="200"></Label>
+        <Label Name="LabelCountryName" FontSize="24" Canvas.Right="39" Canvas.Top="132" Height="50"  Width="200"></Label>
+        <Label Name="LabelFirstDay" Canvas.Left="290" Canvas.Top="50" Width="305">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxFirstDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="ImageFirstDay" Grid.Column="0"/>
+                    <TextBlock Name="TextBlockFirstDay" Grid.Column="1" FontSize="16" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Label Name="LabelSecondDay" Canvas.Top="197" Width="260" Canvas.Left="20">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"/>
-                <TextBlock Name="TextBlockSecondDay" Grid.Column="1"/>
-            </Grid>
+        <Label Name="LabelSecondDay" Canvas.Top="260" Width="270" Canvas.Left="20">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxSecondDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Name="ImageSecondDay"/>
+                    <TextBlock Name="TextBlockSecondDay" Grid.Column="1" FontSize="13" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Label Name="LabelThirdDay" Canvas.Top="197" Width="260" Canvas.Left="301">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"/>
-                <TextBlock Name="TextBlockThirdDay" Grid.Column="1"/>
-            </Grid>
+        <Label Name="LabelThirdDay" Canvas.Top="260" Width="270" Canvas.Left="301">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxThirdDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Name="ImageThirdDay"/>
+                    <TextBlock Name="TextBlockThirdDay" Grid.Column="1" FontSize="13" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Label Name="LabelFourthDay" Canvas.Top="197" Width="260" Canvas.Left="582">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"/>
-                <TextBlock Name="TextBlockFourthDay" Grid.Column="1"/>
-            </Grid>
+        <Label Name="LabelFourthDay" Canvas.Top="260" Width="270" Canvas.Left="582">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxFourthDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Name="ImageFourthDay"/>
+                    <TextBlock Name="TextBlockFourthDay" Grid.Column="1" FontSize="13" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Label Name="LabelFifthDay" Canvas.Top="347" Width="260" Canvas.Left="20">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"/>
-                <TextBlock Name="TextBlockFifthDay" Grid.Column="1"/>
-            </Grid>
+        <Label Name="LabelFifthDay" Canvas.Top="410" Width="270" Canvas.Left="20">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxFifthDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Name="ImageFifthDay"/>
+                    <TextBlock Name="TextBlockFifthDay" Grid.Column="1" FontSize="13" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Label Name="LabelSixthDay" Canvas.Top="347" Width="260" Canvas.Left="301">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"/>
-                <TextBlock Name="TextBlockSixthDay" Grid.Column="1"/>
-            </Grid>
+        <Label Name="LabelSixthDay" Canvas.Top="410" Width="270" Canvas.Left="301">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxSixthDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Name="ImageSixthDay"/>
+                    <TextBlock Name="TextBlockSixthDay" Grid.Column="1" FontSize="13" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Label Name="LabelSeventhDay" Canvas.Top="347" Width="260" Canvas.Left="582">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0"/>
-                <TextBlock Name="TextBlockSeventhDay" Grid.Column="1"/>
-            </Grid>
+        <Label Name="LabelSeventhDay" Canvas.Top="410" Width="270" Canvas.Left="582">
+            <Label.ToolTip>
+                <TextBox Name="TextBoxSeventhDay"/>
+            </Label.ToolTip>
+            <Border Background="GhostWhite" BorderBrush="LightBlue" BorderThickness="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Name="ImageSeventhDay"/>
+                    <TextBlock Name="TextBlockSeventhDay" Grid.Column="1" FontSize="13" Background="LightBlue"/>
+                </Grid>
+            </Border>
         </Label>
-        <Button Content="Найти" Canvas.Left="572" Width="75" RenderTransformOrigin="-0.017,-0.3" Height="26" Canvas.Top="12"/>
+        <Button Name="ButtonFind"  Content="Search" Canvas.Left="572" Width="75" RenderTransformOrigin="-0.017,-0.3" Height="26" Canvas.Top="12" Click="ButtonFind_Click"/>
     </Canvas>
 </Window>
